@@ -1,0 +1,70 @@
+<script>
+document.querySelectorAll('.build-block').forEach((buildBlock) => {
+  buildBlock.addEventListener('click', () => {
+    const isActive = buildBlock.classList.contains('active');
+
+    // Remove active class from all build-blocks
+    document.querySelectorAll('.build-block').forEach((block) => {
+      block.classList.remove('active');
+
+      // Reset child elements to their initial states
+      const answerWrapper = block.querySelector('.answer-wrapper');
+      const iconFaqs = block.querySelector('.icon-faqs');
+      const loadingAnimation = block.querySelector('.loading-animation');
+      const loadingFiller = block.querySelector('.loading-filler');
+      const imageMain = block.querySelector('.image-main');
+      const buttonBorder = block.querySelector('.button-border');
+
+      answerWrapper?.classList.remove('active');
+      iconFaqs?.classList.remove('active');
+      loadingAnimation?.classList.remove('active');
+      loadingFiller?.classList.remove('active');
+      imageMain?.classList.remove('active');
+      buttonBorder?.classList.remove('active');
+    });
+
+    // Toggle active state of the clicked build-block
+    if (!isActive) {
+      buildBlock.classList.add('active');
+
+      // Activate child elements of the clicked block
+      const answerWrapper = buildBlock.querySelector('.answer-wrapper');
+      const iconFaqs = buildBlock.querySelector('.icon-faqs');
+      const imageMain = buildBlock.querySelector('.image-main');
+      const buttonBorder = buildBlock.querySelector('.button-border');
+      const loadingAnimation = buildBlock.querySelector('.loading-animation');
+      const loadingFiller = buildBlock.querySelector('.loading-filler');
+
+
+      answerWrapper?.classList.add('active');
+      iconFaqs?.classList.add('active');
+      imageMain?.classList.add('active');
+      buttonBorder?.classList.add('active');
+      loadingAnimation?.classList.add('active');
+      loadingFiller?.classList.add('active');
+    }
+  });
+});
+
+// Make the first build-block active on page load
+const firstBuildBlock = document.querySelector('#first-build-block');
+if (firstBuildBlock) {
+  firstBuildBlock.classList.add('active');
+  
+  // Activate child elements of the first build-block
+  const answerWrapper = firstBuildBlock.querySelector('.answer-wrapper');
+  const iconFaqs = firstBuildBlock.querySelector('.icon-faqs');
+  const loadingAnimation = firstBuildBlock.querySelector('.loading-animation');
+  const loadingFiller = firstBuildBlock.querySelector('.loading-filler');
+  const imageMain = firstBuildBlock.querySelector('.image-main');
+  const buttonBorder = firstBuildBlock.querySelector('.button-border');
+
+  answerWrapper?.classList.add('active');
+  iconFaqs?.classList.add('active');
+  loadingAnimation?.classList.add('active');
+  loadingFiller?.classList.add('active');
+  imageMain?.classList.add('active');
+  buttonBorder?.classList.add('active');
+}
+
+</script>
