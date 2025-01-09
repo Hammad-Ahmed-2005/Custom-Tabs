@@ -1,0 +1,65 @@
+<style>/* Initial States */
+.build-block {
+  transition: background-color 0.4s ease;
+}
+
+.answer-wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.icon-faqs {
+  opacity: 0.6;
+  transform: rotate(180deg);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.loading-animation {
+  opacity: 0.0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+
+}
+
+.loading-filler {
+  width: 0%;
+  transition: width 0.7s ease-out;
+}
+
+.image-main {
+  display: none;
+}
+
+.button-border {
+  display: block;
+}
+
+/* Active States */
+.build-block.active {
+  background-color: #f6f6f8;
+}
+
+.icon-faqs.active {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.answer-wrapper.active {
+  height: auto;
+}
+
+.loading-animation.active {
+   opacity: 1;
+}
+
+.loading-filler.active {
+  width: 100%;
+}
+
+.image-main.active {
+  display: block;
+}
+.button-border.active {
+  display: none;
+}
+</style>
